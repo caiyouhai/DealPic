@@ -32,6 +32,7 @@ public class ColorMatrixUtils {
     public static Bitmap setRotate(Bitmap bitmap,int axis, float degrees){
         ColorMatrix colorMatrix = new ColorMatrix();
         colorMatrix.reset();
+
         colorMatrix.setRotate(axis,degrees);
         ColorMatrixColorFilter colorFilter = new ColorMatrixColorFilter(colorMatrix);
         return createNewBitmap(bitmap,colorFilter);
